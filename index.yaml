@@ -9,6 +9,6 @@ entries:
     name: webapp-demo
     type: application
     urls:
-    - https://mattiaperi.github.io/helm-chart/webapp-demo-1.0.0.tgz
+    - https://salim-kazarov.github.io/helm-chart/webapp-demo-1.0.0.tgz
     version: 1.0.0
 generated: "2021-04-24T18:52:20.931208+03:00"
