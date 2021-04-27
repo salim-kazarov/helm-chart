@@ -1,0 +1,20 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Validate Helm chart
+        uses: stefanprodan/kube-tools@v1
+        with:
+          command: |
+            helmv3 template ./helm-chart-sources/webapp-demo | kubeval --strict
