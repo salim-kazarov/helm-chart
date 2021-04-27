@@ -1,13 +1,15 @@
-name: test
+name: kubeval
 
 on:
   pull_request:
+    branches:
+      - 'master'
   push:
     branches:
       - 'master'
 
 jobs:
-  test:
+  kubeval:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
